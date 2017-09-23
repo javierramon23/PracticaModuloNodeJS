@@ -1,0 +1,61 @@
+body {
+  margin: 0 auto;
+  width: 1024px;
+  font: 15px "Calibri", Helvetica, Arial, sans-serif;
+}
+
+.introduction {
+  padding: 5px;
+  text-align: center;
+  background-color: #BDBDBD;
+  color: white;
+}
+
+.logo {
+  text-align: center;
+  background-color: #BDBDBD;
+}
+
+.title {
+  text-align: center; 
+}
+
+.articles_list_title {
+  padding: 5px;
+  font-size: 18px;
+  background-color: #BDBDBD;
+  color: white;
+}
+
+.article_list {
+  /* Solucion al problema del contenedor que pierde la altura al usar "Float"*/
+  height: auto;
+  overflow: hidden;
+}
+
+.article {
+  box-sizing: border-box;
+  width: 33%;
+  float: left;
+  padding: 5px;
+}
+
+.article_table {
+  padding: 5px;
+  margin: 0 auto;
+  border: 2px solid #424242;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.article_name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #BDBDBD;
+  color: white;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <header>
+      <div class="logo">
+        <img src="../images/body/appleLogo.png" width="75px">
+      </div>
+      <div class="title">
+        <h1><%= title %></h1>
+      </div>
+  </header>
+  <body>
+    <p class="introduction">
+      Bienvenidos a la nueva aplicación para comprar y vender todo tipo de artículos Apple de segunda mano,
+      si estas buscando algún tipo de dispositivo o gadgets de Apple pero no quieres arruinarte
+      nosotros te ofrecemos la mayor oferta en artículos de la manzana de 2ª mano a unos precios increibles.
+    </p>
+    <div class="articles_list_title">
+      Lista de Productos:
+    </div>
+    <div class="article_list">
+    <% rows.forEach(function(row) {  %>
+      <div class="article">
+        <table class="article_table">
+          <tr>
+            <td class="article_name"><%=row.nombre%><td/>
+            <td rowspan="4"><img class="article_img" src="../images/anuncios/<%=row.foto%>" height="130" width="150"></td>
+          </tr>
+          <% if(row.venta)  { %>
+              <tr><td><label>Artículo en Venta</label><td/></tr>
+          <% } else { %>
+              <tr><td><label>Artículo Buscado</label><td/></tr>
+          <% } %>
+          <tr><td><label>Precio: </label><strong><%=row.precio%>€</strong></td></tr>
+          <tr><td><label>TAGS:</label><%=row.tags%><td/></tr>
+        </table>
+      </div>
+    <% }) %>
+    </div>
+  </body>
+  <hr>
+  <footer>
+    <div class="footer">NodePop | Todos los derechos reservados | NodeJS.KeepCoding | Práctica</div>
+  </footer>
+</html>

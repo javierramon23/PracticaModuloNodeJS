@@ -1,0 +1,103 @@
+{
+    "anuncios": [
+        {   
+            "nombre": "iPhone 6",
+            "venta": true,
+            "precio": 980.0,
+            "foto": "iPhone_6.jpg",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "iPhone 7",
+            "venta": false,
+            "precio": 1000.00,
+            "foto": "iPhone_7.jpg",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "iPhone 8",
+            "venta": true,
+            "precio": 899.00,
+            "foto": "iPhone_8.png",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "iPhone X",
+            "venta": true,
+            "precio": 999.00,
+            "foto": "iPhone_X.png",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "Apple Watch",
+            "venta": false,
+            "precio": 369.00,
+            "foto": "appleWatch.jpg",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "iMac 2017",
+            "venta": false,
+            "precio": 1200.00,
+            "foto": "iMac.png",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "iPad 2017",
+            "venta": true,
+            "precio": 469.00,
+            "foto": "iPad.jpg",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "macBook Air",
+            "venta": true,
+            "precio": 999.00,
+            "foto": "macBook_Air.png",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        },
+        {
+            "nombre": "macBook Pro",
+            "venta": true,
+            "precio": 1700.00,
+            "foto": "macBook_Pro.jpg",
+            "tags": 
+                [
+                    "lifestyle",
+                    "mobile"
+                ]
+        }
+    ]
+}
