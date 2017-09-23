@@ -22,7 +22,7 @@ Para iniciar la aplicación se debe ejecutar a través de la consola el comando:
 
 ## Como se utiliza NodePop:
 Para acceder a la aplicacion:
-***http://localhost:3000***
+```http://localhost:3000```
 
 La aplicación permite realizar búsquedas y aplicarle los sigueintes filtros:
 
