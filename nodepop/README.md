@@ -43,18 +43,17 @@ En este caso se admiten diversos valores del precio:
 4.- Por nombre del artículo:
 ```http://localhost:3000\anunucios?nombre="cualquier_cadena"```
 
-Permite insertar nuevos anuncios:
-
-En este caso, como se trata de un prototipo, para hacer las inserciones se puede utilizar POSTMAN para
-simular la peticion POST de inserción.
-
-Tambien permite listar los TAGS existentes:
-
-
-
 Para realizar la paginación de los resultados, hasta que no se realice la implementacion completa, podemos utilizar
 los parametros ***skip*** y ***limit*** en la URL al solicitar los articulos.
 
 Estos parametros junto con los que definen la búsqueda de articulos pueden combinarse para realizar busquedas mas complestas:
 ```http://localhost:3000/anuncios?tag=&precio=-500&venta=true&nombre=iP&skip=0&limit=2```
+
+Permite insertar nuevos anuncios:
+
+En este caso, como se trata de un prototipo, para hacer las inserciones se puede utilizar POSTMAN para
+simular la peticion POST de inserción.
+
+Permite listar los TAG'S que pueden incluirse en la insercion de un nuevo producto:
+```http://localhost:3000\tags```
 

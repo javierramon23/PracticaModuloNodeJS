@@ -1,11 +1,9 @@
 <% if(error.status === 404) { %>
     <h1><%= __("Error_404")%></h1>
-<% } %>
-<% if(error.status === 500) { %>
+<% } else if (error.status === 500) { %>
     <h1><%= __("Error_500")%></h1>
-<% } %>
-<% if(error.status !== 500 && !==404) { %>
-    <h1><%= error.message %></h1>
+<% } else { %>
+    <h1><%= __("Other_Error") %></h1>
 <% } %>
 <h2><%= error.status %></h2>
 <pre><%= error.stack %></pre>

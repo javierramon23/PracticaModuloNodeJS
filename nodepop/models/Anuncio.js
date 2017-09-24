@@ -9,15 +9,24 @@ const anuncioSchema = mongoose.Schema({
     venta: Boolean,
     precio: Number,
     foto: String,
-    tags: [String]
+    tags: [{
+        type: String,
+        enum: ["work","lifestyle","motor","mobile"]
+    }]
 });
 
+// Busca anuncios en la BD en función de uno o mas FILTROS.
 anuncioSchema.statics.findWithParameters = function(filter, skip, limit, callback) {
     const query = Anuncio.find(filter);
     query.skip(skip);
     query.limit(limit);
 
     return query.exec(callback);
+}
+
+// Devuelve los TAG'S disponibles que se pueden asignar a un producto.
+anuncioSchema.statics.listTags = function(callback) {
+    return Anuncio.schema.path("tags.0").enumValues;
 }
 
 // Se crea un Modelo del anuncio que seguira el Esquema definido antes.

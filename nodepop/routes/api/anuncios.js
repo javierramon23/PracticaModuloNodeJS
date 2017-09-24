@@ -5,7 +5,7 @@ const router = express.Router();
 const Anuncio = require("../../models/Anuncio");
 
 // Peticion GET a /
-// Recupera el contenido de la coleccion Anuncios.
+// Recupera el contenido de la coleccion Anuncios en funcion de unos FILTROS.
 router.get("/", (request, response, next) => {
     // Guaradremos los parametros que se han enviado en la petición a traves de Query String.
     let nombre = request.query.nombre;
@@ -45,6 +45,7 @@ router.get("/", (request, response, next) => {
 
     }
 
+    // Llamamos al metodo statico definido en el modelo.
     Anuncio.findWithParameters(filter, skip, limit).then( listaAnuncios => {
         response.render("index", {title: "NodePop", rows: listaAnuncios});
     }).catch( error => {
@@ -64,7 +65,6 @@ router.post("/", (request, response, next) => {
             next(error);
             return;
         }
-
         response.json({success: true, result: anuncioGuardado});
     });
 });

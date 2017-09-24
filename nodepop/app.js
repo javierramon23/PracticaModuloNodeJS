@@ -1,3 +1,4 @@
+// Cargamos las librerias necesarias.
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -8,12 +9,14 @@ var bodyParser = require('body-parser');
 // Cargamos el módulo que permite la traducción de los errores.
 var i18n = require("./i18n/i18n");
 
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// 
 app.use(i18n);
 
 // Se realiza la conexion con la BD.
@@ -31,7 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //
 app.use('/', require('./routes/index'));
-app.use("/anuncios", require("./routes/api/anuncios"))
+app.use("/anuncios", require("./routes/api/anuncios"));
+app.use("/tags", require("./routes/api/tags"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
