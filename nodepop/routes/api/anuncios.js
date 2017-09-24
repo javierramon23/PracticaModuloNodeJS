@@ -42,7 +42,7 @@ router.get("/", (request, response, next) => {
     }
 
     if(tags) {
-
+        
     }
 
     // Llamamos al metodo statico definido en el modelo.

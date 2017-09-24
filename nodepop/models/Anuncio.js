@@ -26,7 +26,8 @@ anuncioSchema.statics.findWithParameters = function(filter, skip, limit, callbac
 
 // Devuelve los TAG'S disponibles que se pueden asignar a un producto.
 anuncioSchema.statics.listTags = function(callback) {
-    return Anuncio.schema.path("tags.0").enumValues;
+    const listTags = Anuncio.schema.path("tags.0").enumValues;
+    callback(listTags);
 }
 
 // Se crea un Modelo del anuncio que seguira el Esquema definido antes.
