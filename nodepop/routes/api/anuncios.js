@@ -11,7 +11,7 @@ router.get("/", (request, response, next) => {
     let nombre = request.query.nombre;
     let venta = request.query.venta;
     let precio = request.query.precio;
-    let tags = request.query.tag;
+    let tag = request.query.tag;
     let skip = parseInt(request.query.skip);
     let limit = parseInt(request.query.limit);
 
@@ -41,8 +41,9 @@ router.get("/", (request, response, next) => {
         }
     }
 
-    if(tags) {
-        
+    if(tag) {
+        //filter.tags = {$in: [tag]};
+        filter.tags = tag;
     }
 
     // Llamamos al metodo statico definido en el modelo.
